@@ -507,7 +507,8 @@ a {
   background-color: rgba(0, 0, 0, 0.1);
   color: #fff700;
   font-family: "Source Sans Pro", "Arial", sans-serif;
-  font-size: 18px; }
+  font-size: 18px;
+  text-transform: uppercase; }
 
 .form-legend {
   padding-top: 2px;
@@ -541,4 +542,29 @@ a {
   font-family: "Source Sans Pro", "Arial", sans-serif;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.8); }
+
+.error-container {
+  display: none;
+  position: absolute;
+  left: 360px;
+  width: 160px;
+  height: 26px;
+  padding-top: 3px;
+  padding-left: 5px;
+  border-radius: 5px;
+  background-color: rgba(125, 125, 125, 0.7);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-family: "Source Sans Pro", "Arial", sans-serif;
+  font-size: 13px;
+  z-index: 1;
+  line-height: 20px; }
+  .error-container .error-text {
+    margin: 0;
+    padding: 0; }
+  .error-container .error-text__span {
+    color: #fbff00; }
+
+.error-container__active {
+  display: block; }
 
