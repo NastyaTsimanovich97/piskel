@@ -1,0 +1,15 @@
+import './screens/canvas/scss/base.scss';
+import './screens/canvas/js/activeButton';
+import './screens/canvas/js/fillBucket';
+import './screens/canvas/js/activeColor';
+import './screens/canvas/js/chooseColor';
+import './screens/canvas/js/pencilAndEraser';
+import './screens/canvas/js/canvas';
+import './screens/canvas/js/straightLine';
+import './screens/canvas/js/sizeCanvas';
+import './screens/canvas/js/localStorageCanvas';
+import './screens/canvas/js/pixelSize';
+import './screens/frames/frameController';
+import './screens/preview/previewController';
+import './screens/canvas/js/paintAllPixels';
+import './components/modal-dialog/modalDialog';
