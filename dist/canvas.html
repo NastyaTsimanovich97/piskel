@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='../../../dist/pageTwo.[1].css'>
+    <link rel="shortcut icon" href="../canvas/assets/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700&display=swap" rel="stylesheet">
+    <title>Simple piskel clone</title>
+</head>
+<body id="capture">
+        <header class="header">
+                <nav class="navigation-menu">
+                    <div class="nav-icon dropdown-menu">
+                        <img src="images/9eb537b830c8e79839d402e56211dd05.svg" alt="navigation" width="33">
+                        <div class="dropdown-content-menu">
+                            <a href="../../components/landing/index.html">Landing page</a>
+                            <a href="canvas.html">Create New Sprite</a>
+                          </div>
+                    </div>
+                    <h1 class="header-text">Simple Piskel Clone</h1>
+                    <div class="menu"><img class="menu-icon" src="images/5d181859835f81833e1b739a60b9dad8.svg" alt="menu"></div>
+                </nav>
+            </header>
+            <main class="main">
+                <section class="button-control">
+                    <div class="button-range__container">
+                        <div class="dropdown-range-32">
+                            <button class="button-range button-32">32</button>
+                            <div class="dropdown-content_range-32">
+                                <p class="size-canvas">
+                                    Change size <br> canvas <span class="btn-size">32x32 </span>px
+                                </p>
+                            </div>
+                        </div>
+                        <div class="dropdown-range-64">
+                            <button class="button-range button-64">64</button>
+                            <div class="dropdown-content_range-64">
+                                <p class="size-canvas">
+                                    Change size <br> canvas <span class="btn-size">64x64 </span>px
+                                </p>
+                            </div>
+                        </div>
+                        <div class="dropdown-range-128">
+                            <button class="button-range button-128">128</button>
+                            <div class="dropdown-content_range-128">
+                                <p class="size-canvas">
+                                    Change size <br> canvas <span class="btn-size">128x128 </span>px  
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <section class="palette">
+                            <div class="button-group-vertical">
+                                <div class="dropdown-dtn-bucket">
+                                    <button type="button" class="button button__paint-bucket" id="button__palette"> 
+                                        <img class="button__icon icon-bucket" src="images/64a423a66f4dd1cfe556ec8df7deee60.svg" alt="bucket">
+                                        Fill bucket
+                                    </button>
+                                    <div class="dropdown-content__btn-bucket">
+                                        <p class="button-text">Paint bucket tool <span class="btn-key">(B)</span></p>
+                                    </div>
+                                </div>
+                                <div class="dropdown-dtn__choose-color">
+                                    <button type="button" class="button button__choose-color" id="button__palette"> 
+                                        <input type="color" id="input__choose-color" class="input__choose-color" name="input__choose-color" value='#ffffff'> 
+                                        <label class="label__choose-color" for="input__choose-color">
+                                                <img class="button__icon icon-color" id="icon-color" src="images/a7c0b55c94e26baadb7722a1c8865433.svg" alt="icon choose color">
+                                        </label>
+                                        Choose color
+                                    </button>
+                                    <div class="dropdown-content__choose-color">
+                                        <p class="button-text">Choose color tool <span class="btn-key">(C)</span></p>
+                                    </div>
+                                </div>
+                                <div class="dropdown-dtn__pencil">
+                                    <button type="button" class="button button__pencil drop__button" id="button__palette"> 
+                                        <img class="button__icon icon-pencil" src="images/48d8797612e617876af8508f741b1613.svg" alt="">
+                                        Pencil
+                                    </button>
+                                    <div class="dropdown-content__pencil">
+                                        <p class="button-text">Pencil tool <span class="btn-key">(P)</span></p>
+                                    </div>
+                                </div>
+                                <div class="dropdown-dtn__straignt-line">
+                                    <button type="button" class="button button__straight" id="button__palette">
+                                        <img class="button__icon icon-staright" src="images/9c36b245e5fbf8e11f2903bd62f37e19.svg" alt="">
+                                        Straight line
+                                    </button>
+                                    <div class="dropdown-content__straignt-line">
+                                        <p class="button-text">Straight line tool <span class="btn-key">(S)</span></p>
+                                    </div>
+                                </div>
+                                <div class="dropdown-dtn__eraser">
+                                    <button type="button" class="button button__eraser" id="button__palette">
+                                        <img class="button__icon icon-eraser" src="images/9488f30ede632f842e2a5646f63ee983.svg" alt="eraser">
+                                        Eraser
+                                    </button>
+                                    <div class="dropdown-content__eraser">
+                                        <p class="button-text">Eraser tool <span class="btn-key">(E)</span></p>
+                                    </div>
+                                </div>
+                                <div class="dropdown-dtn__all-pxs">
+                                    <button type="button" class="button button__all-pixels" id="button__palette">
+                                        <img class="button__icon icon-all-pixels" src="images/8d3f418a018394cdf76e3f8c18a38c5a.svg" alt="roller">
+                                        Paint all pixels
+                                    </button>
+                                    <div class="dropdown-content__all-pxs">
+                                        <p class="button-text">Paint all pixels of the same color tool <span class="btn-key">(A)</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                    </section>
+                    <div class="button-group-vertical px-group">
+                        <div class="px-size-content dropdown__px-size">
+                            <button class="px_size__1-unit"> <img class="px_size__1-unit" src="images/7fc789dd9739c5c867f8f797027dc24c.svg" alt="" width="15px">1 unit</button>
+                            <button class="px_size__2-unit"><img class="px_size__2-unit" src="images/7fc789dd9739c5c867f8f797027dc24c.svg" alt="" width="20px">2 unit</button>
+                            <button class="px_size__3-unit"><img class="px_size__3-unit" src="images/7fc789dd9739c5c867f8f797027dc24c.svg" alt="" width="25px">3 unit</button>
+                            <button class="px_size__4-unit"><img class="px_size__4-unit" src="images/7fc789dd9739c5c867f8f797027dc24c.svg" alt="" width="30px">4 unit</button>
+                            <div class="dropdown-content__px-size">
+                                <p class="button-text">Pencil and Straight line size from <span class="btn-size">1</span> to <span class="btn-size">4</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <section class="color">
+                            <div class="button-group-vertical" id = 'color-group'>
+                                <button type="button" class="button button__current-color" id="button__color"><div class="button__circle circle-color" ></div> Current color</button>
+                                <button type="button" class="button button__prev-color" id="button__color"><div class="button__circle circle-prev-color" ></div> Prev color</button>
+                                <button type="button" class="button button__user-color-1" id="button__color"><div class="button__circle circle-user-color1" ></div> User color 1</button>
+                                <button type="button" class="button button__user-color-1" id="button__color"><div class="button__circle circle-user-color2" ></div> User color 2</button>
+                            </div>
+                    </section>
+                </section>
+                <section class="section-frames">
+                    <div class="container__all-frames droppable">
+                        <div class="first-frame__container frame__container" draggable="true">
+                            <div class="number-frame__circle">
+                                <p class="number_frame">1</p>
+                                <div class="clone-frame"></div>
+                                <div class="delete-frame delete-frame__first"></div>
+                                <div class="move-frame move-frame__first"></div>
+                            </div>
+                            <div class="canvas-frame_background frame-1">
+                                <canvas id="canvas-frame" class="canvas__active-frame" width="96" height="96">
+                                    <img id="load__frame" class="load__active-frame" alt="img_canvas">
+                                </canvas>
+                            </div>
+                            <div class="triangle-right"></div>
+                        </div>  
+                    </div>
+                    <div class="frame_btn-container dropdown-dtn__new-frame">
+                        <button class="frame-button"> <img src="images/2e20dce17a62f1482b7141d6fbe1a010.svg" alt="plus" width="20px"> Add new frame</button>
+                        <div class="dropdown-content__new-frame">
+                            <p class="button-text">Add new frame <span class="btn-key">(N)</span></p>
+                        </div>
+                    </div>  
+                </section>
+                <section class="section__canvas">
+                    <canvas id="canvas4" class="canvas" width="128" height="128">
+                        <img id="load__img" alt="img_canvas">
+                    </canvas>
+                </section>
+                <section class="section-preview">
+                    <div class="canvas-preview__backgroud" onmousedown="return false" onselectstart="return false">
+                        <img alt="" class="preview__item" onmousedown="return false" onselectstart="return false">
+                    </div>
+                    <div class="fps-container">
+                        <label class="fps-label" for="fps"><span class="fps-number"> </span> FPS</label>
+                        <input type="range" name="fps" id="fps_input" class="fps_input" min="1" max="24" step="1">
+                    </div>
+                    <div class="container__flscreen-button dropdown__flscreen">
+                        <button class="flscreen-button"><img src="images/c4cd85029bc98ab6a07120fa68ad131b.svg" alt="FullScreen" width="20"> FullScreen</button>
+                        <div class="dropdown-content__flscreen">
+                            <p class="button-text">FullScreen <span class="btn-key">(F)</span></p>
+                        </div>
+                    </div>
+                    <div class="container__change-button">
+                        <button class="change-button"><img src="images/cd2bdcc8a45b0f7b4468f8beae445d58.svg" alt="FullScreen" width="20">Change keyboard shortcuts</button>
+                    </div>
+                </section>
+            </main>
+            <div class="change-form-hidden">
+                <form action="" class="change-form">
+                    <legend class="form-legend">Change keyboard shortcuts</legend>
+                    <p class="message">Please enter the letters only in UPPERCASE!</p>
+                    <div class="bucket-container">
+                        <label class="form-label label-bucket" for="bucket-key">Paint bucket key</label>
+                        <input class="form-input" type="text" name="bucket-key" id="input-bucket" pattern="[A-Z]">
+                    </div>
+
+                    <div class="color-container">
+                        <label class="form-label label-color" for="color-key">Choose color key</label>
+                        <input class="form-input" type="text" name="color-key" id="input-color" pattern="[A-Z]">
+                    </div>
+
+                    <div class="pencil-container">
+                        <label class="form-label label-pencil" for="pencil-key">Pencil key</label>
+                        <input class="form-input" type="text" name="pencil-key" id="input-pencil" pattern="[A-Z]">
+                    </div>
+                    
+                    <div class="line-container">
+                        <label class="form-label label-line" for="line-key">Straight line key</label>
+                        <input class="form-input" type="text" name="line-key" id="input-line" pattern="[A-Z]">
+                    </div>
+
+                    <div class="eraser-container">
+                        <label class="form-label label-eraser" for="eraser-key">Eraser key</label>
+                        <input class="form-input " type="text" name="eraser-key" id="input-eraser" pattern="[A-Z]">
+                    </div>
+
+                    <div class="paint-all-container">
+                        <label class="form-label label-paint-all" for="paint-all-key">Paint all pixel key</label>
+                        <input class="form-input " class="form-input" type="text" name="paint-all-key" id="input-paint-all" pattern="[A-Z]">
+                    </div>
+
+                    <div class="new-frame_container">
+                        <label class="form-label label-new-frame" for="new-frame-key">Add new frame key</label>
+                        <input class="form-input " type="text" name="new-frame-key" id="input-new-frame" pattern="[A-Z]">
+                    </div>
+
+                    <div class="fullscreen-container">
+                        <label class="form-label label-flscreen" for="fullscreen-key">Fullscreen key</label>
+                        <input class="form-input " type="text" name="fullscreen-key" id="input-flscreen" pattern="[A-Z]">
+                    </div>
+                    <div class="form__btn-container">
+                        <div class="btn-exit">Exit</div>
+                        <div class="btn-change">Change</div>
+                    </div>
+                </form>
+            </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script>
+      mocha.setup('bdd');
+    </script>
+    <script type="text/javascript" src="../../../dist/pageTwo.js"></script>
+</body>
+</html>
