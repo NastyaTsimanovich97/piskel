@@ -4,9 +4,10 @@
   "description": "WebPack: HTML, CSS, SCSS, JS, Img, Fonts",
   "main": "bundle.js",
   "scripts": {
+    "buildpost": "node_modules/.bin/webpack --progress",
     "start": "webpack --watch",
     "clear": "del-cli dist",
-    "build": "webpack",
+    "build": "npm run clear -s && npm run buildpost -s",
     "lint": "eslint ./src",
     "test": "jest"
   },

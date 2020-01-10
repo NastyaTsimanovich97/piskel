@@ -175,21 +175,21 @@ const config = {
     })
   ],
 
-  // devServer: {
-  //   contentBase: path.join(__dirname, 'dist'),
-  //   compress: true,
-  //   port: 3000,
-  //   // stats: {
-  //   //   colors: true,
-  //   //   modules: false,
-  //   //   chunks: false,
-  //   //   chunkGroups: false,
-  //   //   chunkModules: false,
-  //   //   env: true,
-  //   // },
-  //   stats: 'errors-only',
-  //   clientLogLevel: 'none'
-  // }
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 3000,
+    // stats: {
+    //   colors: true,
+    //   modules: false,
+    //   chunks: false,
+    //   chunkGroups: false,
+    //   chunkModules: false,
+    //   env: true,
+    // },
+    stats: 'errors-only',
+    clientLogLevel: 'none'
+  }
 }
 
 if (isProd) {
