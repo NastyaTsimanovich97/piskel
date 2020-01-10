@@ -44,37 +44,38 @@ document.addEventListener('keypress', (e) => {
   activeButton = document.querySelector(`.${classActive}`);
   activeButton.classList.remove('isActive__button');
   const keyArray = localStorage.getItem('keyArray').split(',');
-
-  if (e.code === `Key${keyArray[0]}`) {
-    activeButton = document.querySelector('.button__paint-bucket');
-    activeButton.classList.toggle('isActive__button');
-    localStorage.setItem('activeButton', 'button__paint-bucket');
-  }
-  if (e.code === `Key${keyArray[1]}`) {
-    activeButton = document.querySelector('.button__choose-color');
-    activeButton.classList.toggle('isActive__button');
-    localStorage.setItem('activeButton', 'button__choose-color');
-  }
-  if (e.code === `Key${keyArray[2]}`) {
-    activeButton = document.querySelector('.button__pencil');
-    activeButton.classList.toggle('isActive__button');
-    localStorage.setItem('activeButton', 'button__pencil');
-  }
-  if (e.code === `Key${keyArray[3]}`) {
-    activeButton = document.querySelector('.button__straight');
-    activeButton.classList.toggle('isActive__button');
-    localStorage.setItem('activeButton', 'button__straight');
-    straightLine();
-  }
-  if (e.code === `Key${keyArray[4]}`) {
-    activeButton = document.querySelector('.button__eraser');
-    activeButton.classList.toggle('isActive__button');
-    localStorage.setItem('activeButton', 'button__eraser');
-  }
-  if (e.code === `Key${keyArray[5]}`) {
-    activeButton = document.querySelector('.button__all-pixels');
-    activeButton.classList.toggle('isActive__button');
-    localStorage.setItem('activeButton', 'button__all-pixels');
-    paintAllPixels();
+  if (!document.body.classList.contains('modal-active')) {
+    if (e.code === `Key${keyArray[0]}`) {
+      activeButton = document.querySelector('.button__paint-bucket');
+      activeButton.classList.toggle('isActive__button');
+      localStorage.setItem('activeButton', 'button__paint-bucket');
+    }
+    if (e.code === `Key${keyArray[1]}`) {
+      activeButton = document.querySelector('.button__choose-color');
+      activeButton.classList.toggle('isActive__button');
+      localStorage.setItem('activeButton', 'button__choose-color');
+    }
+    if (e.code === `Key${keyArray[2]}`) {
+      activeButton = document.querySelector('.button__pencil');
+      activeButton.classList.toggle('isActive__button');
+      localStorage.setItem('activeButton', 'button__pencil');
+    }
+    if (e.code === `Key${keyArray[3]}`) {
+      activeButton = document.querySelector('.button__straight');
+      activeButton.classList.toggle('isActive__button');
+      localStorage.setItem('activeButton', 'button__straight');
+      straightLine();
+    }
+    if (e.code === `Key${keyArray[4]}`) {
+      activeButton = document.querySelector('.button__eraser');
+      activeButton.classList.toggle('isActive__button');
+      localStorage.setItem('activeButton', 'button__eraser');
+    }
+    if (e.code === `Key${keyArray[5]}`) {
+      activeButton = document.querySelector('.button__all-pixels');
+      activeButton.classList.toggle('isActive__button');
+      localStorage.setItem('activeButton', 'button__all-pixels');
+      paintAllPixels();
+    }
   }
 });

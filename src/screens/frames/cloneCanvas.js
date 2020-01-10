@@ -7,6 +7,8 @@ export default function cloneCanvas(src) {
   const image = document.querySelector('.load__active-frame');
   image.setAttribute('src', src);
   const ctxFrame = frame.getContext('2d');
+  ctxFrame.imageSmoothingEnabled = false;
+  ctxFrame.webkitImageSmoothingEnabled = false;
   const img = new Image();
   img.crossOrigin = 'Anonymous';
   img.onload = () => {

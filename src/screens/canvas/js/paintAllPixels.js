@@ -8,7 +8,7 @@ export default function paintAllPixels() {
       ctx.fillStyle = color;
       ctx.fillRect(0, 0, 512, 512);
     }
-  })
+  });
 }
 
 

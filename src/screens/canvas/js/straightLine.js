@@ -11,6 +11,8 @@ function line(x0, y0, x1, y1) {
 
   while (!undefined) {
     const ctx = document.getElementById('canvas4').getContext('2d');
+    ctx.imageSmoothingEnabled = false;
+    ctx.webkitImageSmoothingEnabled = false;
     ctx.globalCompositeOperation = 'source-over';
     ctx.fillRect(x, y, setPixel(), setPixel());
     if (Math.abs(x - x1) < 0.0001 && Math.abs(y - y1) < 0.0001) break;

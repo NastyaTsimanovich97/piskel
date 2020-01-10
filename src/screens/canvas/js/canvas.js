@@ -11,6 +11,8 @@ export default function newCanvas(src) {
     const width = +img.width;
     const height = +img.height;
     if (width / height === 1) {
+      canvas.imageSmoothingEnabled = false;
+      canvas.webkitImageSmoothingEnabled = false;
       canvas.drawImage(img, 0, 0, ctx.width, ctx.height);
     }
     if (width / height < 1) {
@@ -19,6 +21,8 @@ export default function newCanvas(src) {
         const widthImg = width * coef;
         const heightImg = height * coef;
         const x = (512 - widthImg) / 2;
+        canvas.imageSmoothingEnabled = false;
+        canvas.webkitImageSmoothingEnabled = false;
         canvas.drawImage(img, x, 0, widthImg, heightImg);
       }
       if (height >= 512) {
@@ -26,6 +30,8 @@ export default function newCanvas(src) {
         const widthImg = width / coef;
         const heightImg = height / coef;
         const x = (512 - widthImg) / 2;
+        canvas.imageSmoothingEnabled = false;
+        canvas.webkitImageSmoothingEnabled = false;
         canvas.drawImage(img, x, 0, widthImg, heightImg);
       }
     }
@@ -35,6 +41,8 @@ export default function newCanvas(src) {
         const widthImg = width * coef;
         const heightImg = height * coef;
         const y = (512 - heightImg) / 2;
+        canvas.imageSmoothingEnabled = false;
+        canvas.webkitImageSmoothingEnabled = false;
         canvas.drawImage(img, 0, y, widthImg, heightImg);
       }
       if (width >= 512) {
@@ -42,6 +50,8 @@ export default function newCanvas(src) {
         const widthImg = width / coef;
         const heightImg = height / coef;
         const y = (512 - heightImg) / 2;
+        canvas.imageSmoothingEnabled = false;
+        canvas.webkitImageSmoothingEnabled = false;
         canvas.drawImage(img, 0, y, widthImg, heightImg);
       }
     }
@@ -49,13 +59,13 @@ export default function newCanvas(src) {
   };
 
   img.src = src;
-  canvas.imageSmoothingEnabled = false;
-  canvas.webkitImageSmoothingEnabled = false;
 }
 
 if (!localStorage.getItem('canvas')) {
   localStorage.setItem('sizeCanvas', 128);
   const canvas4 = document.getElementById('canvas4').getContext('2d');
+  canvas4.imageSmoothingEnabled = false;
+  canvas4.webkitImageSmoothingEnabled = false;
   canvas4.fillStyle = 'rgb(224, 224, 224)';
   canvas4.fillRect(0, 0, 512, 512);
 } else {

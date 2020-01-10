@@ -53,7 +53,7 @@ $font: 'Source Sans Pro','Arial', sans-serif;
   color: rgba($color: #fff700, $alpha: 1.0);
   font-family: $font;
   font-size: 18px;
-  // text-transform: uppercase;
+  text-transform: uppercase;
 }
 .form-legend{
   padding-top: 2px;
@@ -88,3 +88,28 @@ $font: 'Source Sans Pro','Arial', sans-serif;
   font-size: 13px;
   color: rgba($color: #ffffff, $alpha: 0.8);
 }
+.error-container{
+    display: none;
+    position: absolute;
+    left: 360px;
+    width: 160px;
+    height: 26px;
+    padding-top: 3px;
+    padding-left: 5px;
+    border-radius: 5px;
+    background-color: rgba(125, 125, 125, 0.7);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    color: rgba($color: #ffffff, $alpha: 1.0);
+    font-family: $font;
+    font-size: 13px;
+    z-index: 1;
+    line-height: 20px;
+    .error-text{
+      margin: 0;
+      padding: 0;
+    }
+    .error-text__span{
+      color: rgba($color: #fbff00, $alpha: 1.0);
+    }
+}
+.error-container__active{display: block;}

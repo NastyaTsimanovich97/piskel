@@ -14,8 +14,9 @@ fullScreenButton.addEventListener('click', fullScreen);
 
 document.addEventListener('keypress', (e) => {
   const keyArray = localStorage.getItem('keyArray').split(',');
-
-  if (e.code === `Key${keyArray[7]}`) {
-    fullScreen();
+  if (!document.body.classList.contains('modal-active')) {
+    if (e.code === `Key${keyArray[7]}`) {
+      fullScreen();
+    }
   }
 });

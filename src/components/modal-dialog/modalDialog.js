@@ -15,11 +15,13 @@ buttonModal.addEventListener('click', () => {
 
   createHtmlElement('div', 'main-hidden', parent);
   document.body.style.overflowY = 'hidden';
+  document.body.classList.add('modal-active');
   keyValue();
 });
 
 const buttonExit = document.querySelector('.btn-exit');
 buttonExit.addEventListener('click', () => {
+  document.body.classList.remove('modal-active');
   closeModal();
 });
 
@@ -28,4 +30,5 @@ buttonChange.addEventListener('click', () => {
   changeKey();
 
   closeModal();
+  document.body.classList.remove('modal-active');
 });

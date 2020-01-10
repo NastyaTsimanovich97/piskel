@@ -6,15 +6,17 @@ let mousedown;
 
 function redraw(x, y) {
   const ctx = document.getElementById('canvas4').getContext('2d');
-  ctx.imageSmoothingEnabled = false;
-  ctx.webkitImageSmoothingEnabled = false;
   ctx.globalCompositeOperation = 'source-over';
   if (paint === true) {
     ctx.fillStyle = localStorage.getItem('activeColor');
+    ctx.imageSmoothingEnabled = false;
+    ctx.webkitImageSmoothingEnabled = false;
     ctx.fillRect(x - 1, y - 1, setPixel(), setPixel());
   }
   if (eraser === true) {
     ctx.fillStyle = 'rgb(224, 224, 224)';
+    ctx.imageSmoothingEnabled = false;
+    ctx.webkitImageSmoothingEnabled = false;
     ctx.fillRect(x - 1, y - 1, 4, 4);
     ctx.globalCompositeOperation = 'destination-out';
   }

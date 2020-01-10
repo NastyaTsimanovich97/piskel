@@ -54,9 +54,11 @@ button.addEventListener('click', () => {
 
 document.addEventListener('keypress', (e) => {
   const keyArray = localStorage.getItem('keyArray').split(',');
-  if (e.code === `Key${keyArray[6]}`) {
-    const frameContainer = document.querySelector('.container__all-frames');
-    addNewFrame(frameContainer, 'append');
-    cleanCanvas();
+  if (!document.body.classList.contains('modal-active')) {
+    if (e.code === `Key${keyArray[6]}`) {
+      const frameContainer = document.querySelector('.container__all-frames');
+      addNewFrame(frameContainer, 'append');
+      cleanCanvas();
+    }
   }
 });
