@@ -220,6 +220,10 @@ a {
   .button-range:hover {
     transform: scale(0.95); }
 
+.active__button-range {
+  background-color: #7b7b7b;
+  color: rgba(255, 255, 255, 0.9); }
+
 .dropdown-content_range-32,
 .dropdown-content_range-64,
 .dropdown-content_range-128 {
