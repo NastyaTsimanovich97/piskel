@@ -5,7 +5,6 @@ document.addEventListener('mousedown', (e) => {
     const frame = e.target.parentElement.parentElement;
     const shiftY = e.clientY - frame.getBoundingClientRect().top;
 
-    // frame.style.position = 'absolute'; // может удалить?
     frame.style.zIndex = 10;
 
     const section = document.querySelector('.container__all-frames');
@@ -24,22 +23,12 @@ document.addEventListener('mousedown', (e) => {
     // eslint-disable-next-line no-inner-declarations
     function onMouseMove(event) {
       moveAt(event.pageY);
-      e.target.hidden = true;
-      const elemBelow = document.elementFromPoint(event.clientX, event.clientY);
-      e.target.hidden = false;
-      console.log(elemBelow);
     }
 
     document.addEventListener('mousemove', onMouseMove);
 
-    // document.addEventListener('mouseover', (element) => {
-    //   console.log(element.target.parentElement.parentElement);
-    // });
-
     document.addEventListener('mouseup', () => {
       numberFrame();
-      // frame.style.position = '';
-      // frame.style.top = '0px';
       document.removeEventListener('mousemove', onMouseMove);
       document.onmouseup = null;
     });

@@ -2,11 +2,9 @@ import activeFrame from './activeFrame';
 
 const canvas = document.querySelector('#canvas4');
 
-export default function cloneCanvas(src) {
-  const frame = document.querySelector('.canvas__active-frame');
-  const image = document.querySelector('.load__active-frame');
+export function drawImg(canvasElement, image, src) {
   image.setAttribute('src', src);
-  const ctxFrame = frame.getContext('2d');
+  const ctxFrame = canvasElement.getContext('2d');
   ctxFrame.imageSmoothingEnabled = false;
   ctxFrame.webkitImageSmoothingEnabled = false;
   const img = new Image();
@@ -18,9 +16,19 @@ export default function cloneCanvas(src) {
   img.src = src;
 }
 
+export default function cloneCanvas(src) {
+  const frame = document.querySelector('.canvas__active-frame');
+  const image = document.querySelector('.load__active-frame');
+  drawImg(frame, image, src);
+}
+
 if (localStorage.getItem('canvas')) {
-  const src = localStorage.getItem('canvas');
-  cloneCanvas(src);
+  const arrayFrames = localStorage.getItem('canvasFrames').split(',');
+  const dataFrames = [];
+  for (let i = 0; i < arrayFrames.length; i += 2) {
+    dataFrames.push(`${arrayFrames[i]},${arrayFrames[i + 1]}`);
+  }
+  cloneCanvas(dataFrames[0]);
   activeFrame('canvas-frame_background', 'add', 'active-frame');
 }
 canvas.addEventListener('click', () => {

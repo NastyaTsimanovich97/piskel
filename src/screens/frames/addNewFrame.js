@@ -40,10 +40,14 @@ export default function addNewFrame(position, fn) {
   canvas.setAttribute('id', 'canvas-frame');
   canvas.setAttribute('width', '96');
   canvas.setAttribute('height', '96');
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = 'rgb(224, 224, 224)';
+  ctx.fillRect(0, 0, 96, 96);
   const canvasImg = createHtmlElement('img', 'load__frame', canvas);
   canvasImg.classList.add('load__active-frame');
 
   isFirstFrame();
+  return canvasImg;
 }
 
 button.addEventListener('click', () => {

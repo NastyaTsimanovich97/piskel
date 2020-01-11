@@ -60,16 +60,3 @@ export default function newCanvas(src) {
 
   img.src = src;
 }
-
-if (!localStorage.getItem('canvas')) {
-  localStorage.setItem('sizeCanvas', 128);
-  const canvas4 = document.getElementById('canvas4').getContext('2d');
-  canvas4.imageSmoothingEnabled = false;
-  canvas4.webkitImageSmoothingEnabled = false;
-  canvas4.fillStyle = 'rgb(224, 224, 224)';
-  canvas4.fillRect(0, 0, 512, 512);
-} else {
-  const image = localStorage.getItem('canvas');
-  localStorage.setItem('sizeCanvas', 128);
-  newCanvas(image);
-}

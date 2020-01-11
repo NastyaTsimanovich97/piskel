@@ -7,7 +7,6 @@ document.addEventListener('click', (e) => {
     const nextFrame = e.target.parentElement.parentElement;
     const img = e.target.parentElement.nextElementSibling.firstElementChild.firstElementChild;
     addNewFrame(nextFrame, 'after');
-    console.log(nextFrame)
     newCanvas(img.src);
     cloneCanvas(img.src);
   }

@@ -230,6 +230,10 @@ a{
         transform: scale(0.95);
     }
 }
+.active__button-range{
+    background-color: rgb(123, 123, 123);
+    color: rgba($color: #ffffff, $alpha: 0.9);
+}
 .dropdown-content_range-32,
 .dropdown-content_range-64,
 .dropdown-content_range-128{
