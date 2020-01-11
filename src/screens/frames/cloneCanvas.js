@@ -23,12 +23,17 @@ export default function cloneCanvas(src) {
 }
 
 if (localStorage.getItem('canvas')) {
-  const arrayFrames = localStorage.getItem('canvasFrames').split(',');
-  const dataFrames = [];
-  for (let i = 0; i < arrayFrames.length; i += 2) {
-    dataFrames.push(`${arrayFrames[i]},${arrayFrames[i + 1]}`);
+  if (localStorage.getItem('canvasFrames')) {
+    const arrayFrames = localStorage.getItem('canvasFrames').split(',');
+    const dataFrames = [];
+    for (let i = 0; i < arrayFrames.length; i += 2) {
+      dataFrames.push(`${arrayFrames[i]},${arrayFrames[i + 1]}`);
+    }
+    cloneCanvas(dataFrames[0]);
+  } else {
+    const src = localStorage.getItem('canvas');
+    cloneCanvas(src);
   }
-  cloneCanvas(dataFrames[0]);
   activeFrame('canvas-frame_background', 'add', 'active-frame');
 }
 canvas.addEventListener('click', () => {
