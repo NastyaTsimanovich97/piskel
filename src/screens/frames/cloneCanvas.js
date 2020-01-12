@@ -29,11 +29,13 @@ if (localStorage.getItem('canvas')) {
     for (let i = 0; i < arrayFrames.length; i += 2) {
       dataFrames.push(`${arrayFrames[i]},${arrayFrames[i + 1]}`);
     }
+    activeFrame('canvas-frame_background', 'add', 'active-frame');
     cloneCanvas(dataFrames[0]);
   } else {
     const src = localStorage.getItem('canvas');
     cloneCanvas(src);
   }
+} else {
   activeFrame('canvas-frame_background', 'add', 'active-frame');
 }
 canvas.addEventListener('click', () => {
